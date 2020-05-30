@@ -1,0 +1,28 @@
+<div class="container">
+    <form name="forgotForm" #forgotForm="ngForm" action="">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Template Driven Form Demo - Password Reset</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span id="success-msg" *ngIf="message!==''" style="color:green; font-weight: bold">{{message}}</span>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="useremail">Enter Email Id:</label>
+                        <input  required email #useremail="ngModel" ngModel type="text" class="form-control" id="useremail" name="useremail" />
+                        <br />
+                        <span class="alert alert-danger" id="" *ngIf="useremail.invalid && useremail.errors['email']">Email is not valid</span>
+                    </div>
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-primary" (click)="submitForm()" [disabled] = "forgotForm.invalid" id="submitBtn" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

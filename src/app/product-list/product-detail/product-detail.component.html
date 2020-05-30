@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <figure class="card card-product">
+                
+                    <figcaption class="info-wrap">
+                        <h4 class="title">{{product.title}}</h4>
+                        <p class="desc">{{product.description}}</p>
+                        <div class="rating-wrap">
+                            <div class="label-rating">{{product.ratin}}</div>
+                            <div class="label-rating">154 orders </div>
+                        </div> <!-- rating-wrap.// -->
+                    </figcaption>
+                    <div class="bottom-wrap">
+                        <button (click)="goBackProductList($event)" class="btn btn-sm btn-primary float-right">&lt; Back </button>
+                        <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>
+                        <div class="price-wrap h5">
+                            <span class="price-new">${{product.price}}</span>
+                        </div> <!-- price-wrap.// -->
+                    </div> <!-- bottom-wrap.// -->
+            </figure>
+        </div> <!-- col // -->
+    </div>
+</div>

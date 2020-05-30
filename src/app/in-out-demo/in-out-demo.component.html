@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h3>@Input @Output Example</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h5>User List</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="list-group" style="cursor: pointer;">
+                <li *ngFor="let user of userInfo; let i = index" id="{{'user_'+i}}" class="list-group-item" (click)="setUser(user)">{{user.name }} <span class="badge">{{user.age}}</span></li>
+                
+              </ul>
+        </div>
+        <div class="col-md-6">
+            <user-detail [selUser]="selectedUser"  (updateUser)="updateUserArr($event)"></user-detail>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6">
+        <h5>User Detail</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3" id="userid">Id - {{userid}}</div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div >
+            <label for="age">Name</label>
+            <input class="form-control" id="username" type="text" name="username" [(ngModel)]="username" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div >
+            <label for="age">Age</label>
+            <input class="form-control" id="age" type="text" id="age" name="age" [(ngModel)]="age" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-md-6"><br /><button class="btn btn-primary" (click)="saveUser()" type="button">Save User</button></div>
+</div>

@@ -1,0 +1,27 @@
+<h2 class="display-4 text-white">Pipe Testing</h2>
+<p class="lead">A pipe transforms the data within HTML <br />
+Example: </p>
+<div ngNonBindable>
+    <span style="color: red" >Square :- {{ inputNumber | squarePipe }} </span>
+</div>
+<div class="separator"></div>
+<h4 class="text-white">Following HTML code is used in test</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9"><h3>Testing Custom Pipe <span ngNonBindable>{{ 10 | squarePipe}} = 100</span></h3></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="inputNumber"/> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <br />
+            <div  id="customDiv" >Square :- {{ inputNumber | squarePipe }}</div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,22 @@
+<div class="card m-3">
+  <div class="card-body">
+    <form name="postForm" [formGroup]="postForm">
+      <div class="form-group form-inline text-left">
+        <label class="mr-4">Title: </label>
+        <input class="form-control col-10" name="titlePost" formControlName="postTitle" #titlePost />
+      </div>
+      <div class="form-group">
+        <label>Body: </label>
+        <textarea class="form-control" name="postBody" formControlName="postBody" #bodyPost></textarea>
+      </div>
+      <button class="btn btn-block btn-primary" (click)="addPost()">Post </button>
+    </form>
+  </div>
+</div>
+<div class="card m-3" *ngFor="let post of postList">
+  <div class="card-body">
+    <h4 class="card-title">{{ post.title | uppercase}}</h4>
+    <small> <strong>Name: </strong> {{ post.name }}</small>
+    <p>{{ post.body }}</p>
+  </div>
+</div>

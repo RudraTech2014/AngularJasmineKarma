@@ -1,0 +1,26 @@
+<h2 class="display-4 text-white">Attribute Directive Testing</h2>
+<p class="lead">An attribute directive modifies the behavior of an element, component or another directive.
+Example: </p>
+<div ngNonBindable>
+&lt;div <span style="color: red" >HelloDirective [userinfo]="username" </span>&gt;&lt;/div&gt;
+</div>
+<div class="separator"></div>
+<h4 class="text-white">Following HTML code is used in test</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"><h2>Testing Attribute Directive</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="username"/> <button class="btn btn-primary" (click)="showDiv()">Show Div</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <br />
+            <div *ngIf="isClicked"  id="customDiv" HelloDirective [userinfo]="username"></div>
+        </div>
+    </div>
+</div>
+
+
