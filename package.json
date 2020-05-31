@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.11",
     "bootstrap": "^4.4.1",
     "jasmine-marbles": "^0.6.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
