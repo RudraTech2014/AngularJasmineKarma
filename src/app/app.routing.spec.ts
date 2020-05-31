@@ -24,7 +24,7 @@ import { ProductService } from './product-list/product.service';
 
 
 
-fdescribe('AppComponent Routing Example', () => {
+describe('AppComponent Routing Example', () => {
   let router: Router;
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;

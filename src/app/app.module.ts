@@ -26,7 +26,6 @@ import { MarbleTestComponent } from './marble-test/marble-test.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ProductDetailComponent } from './product-list/product-detail/product-detail.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +46,8 @@ import { ProductDetailComponent } from './product-list/product-detail/product-de
     HttpDemoComponent,
     MarbleTestComponent,
     IntroductionComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    FirstTestComponent
     
   ],
   imports: [

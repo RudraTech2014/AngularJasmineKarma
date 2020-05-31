@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { ProductService } from './product.service';
+import { Router } from '@angular/router';
 
 describe('ProductListComponent', () => {
   let component: ProductListComponent;
@@ -13,10 +14,16 @@ describe('ProductListComponent', () => {
   let productService: ProductService;
 
   beforeEach(async(() => {
+    const routerSpy = jasmine.createSpyObj('Router', ['navigate']);
     TestBed.configureTestingModule({
       declarations: [ProductListComponent],
       imports: [FormsModule],
-      providers: [ProductService]
+      providers: [ProductService, 
+         {
+           provide: Router,
+           useValue: routerSpy
+         }
+      ]
     })
       .compileComponents();
   }));
