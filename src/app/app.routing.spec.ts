@@ -49,13 +49,13 @@ fdescribe('AppComponent Routing Example', () => {
         ProductDetailComponent,
         HelloDirective
       ],
-      providers: [ProductService, AuthenticationService,
-        {
-            provide: ActivatedRoute,
-            useValue: {
-              paramMap: of(convertToParamMap({ title: 'Asparagus' }))
-            }
-        }]
+      providers: [ProductService, AuthenticationService, {
+        provide: ActivatedRoute,
+        useValue: {
+          paramMap: of(convertToParamMap({ title: 'Asparagus' }))
+        }
+      }
+      ]
     }).compileComponents();
   }));
 
@@ -81,6 +81,7 @@ fdescribe('AppComponent Routing Example', () => {
 
   }));
 
+
   it('should navigate to path when clicked on link(fakeAsync)', fakeAsync(() => {
     fixture.detectChanges();
     let links = debugElement.queryAll(By.directive(RouterLinkWithHref));
@@ -89,25 +90,24 @@ fdescribe('AppComponent Routing Example', () => {
     expect(location.path()).toBe('/pipe-testing');
   }));
 
-  
-  it('should test component with Activated Route', fakeAsync(()=>{
+  it('should test component with Activated Route', fakeAsync(() => {
     fixture.detectChanges();
     tick();
-        
+
     router.navigate(['product-list']);
     tick();
-    expect(location.path()).toBe('/product-list'); 
+    expect(location.path()).toBe('/product-list');
     fixture.detectChanges();
     let liElement = debugElement.queryAll(By.css('.list-group-item'));
     liElement[2].nativeElement.click();
     tick();
-    expect(location.path()).toContain('/product-detail'); 
-    fixture.detectChanges(); 
-    
+    expect(location.path()).toContain('/product-detail');
+    fixture.detectChanges();
+
     let detailFixture = TestBed.createComponent(ProductDetailComponent);
     let detailComp = detailFixture.componentInstance;
-    
-    
+
+
     detailFixture.detectChanges();
     tick();
     expect(detailComp.product.title).toBe('Asparagus');

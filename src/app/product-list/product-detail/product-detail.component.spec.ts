@@ -6,7 +6,7 @@ import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
 import { ActivatedRouteStub } from '../activated-route-stub';
 import { of } from 'rxjs';
 
-describe('ProductDetailComponent', () => {
+fdescribe('ProductDetailComponent', () => {
   let component: ProductDetailComponent;
   let fixture: ComponentFixture<ProductDetailComponent>;
   
