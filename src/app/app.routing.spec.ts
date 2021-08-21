@@ -15,12 +15,14 @@ import { AuthenticationService } from './authentication.service';
 import { CustomDirectiveDemoComponent } from './custom-directive-demo/custom-directive-demo.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SquarePipe } from './custom-pipe/square.pipe';
 import { HelloDirective } from './custom-directive-demo/hello.directive';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-list/product-detail/product-detail.component';
 import { ProductService } from './product-list/product.service';
+import { FormDemoComponent } from './form-demo/form-demo.component';
+import { AsyncValidatorComponent } from './form-demo/async-validator/async-validator.component';
 
 
 
@@ -37,6 +39,7 @@ describe('AppComponent Routing Example', () => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
+        ReactiveFormsModule,
         RouterTestingModule.withRoutes(routes)
       ],
       declarations: [
@@ -47,7 +50,9 @@ describe('AppComponent Routing Example', () => {
         SquarePipe,
         ProductListComponent,
         ProductDetailComponent,
-        HelloDirective
+        HelloDirective,
+        AsyncValidatorComponent,
+        FormDemoComponent
       ],
       providers: [ProductService, AuthenticationService, {
         provide: ActivatedRoute,

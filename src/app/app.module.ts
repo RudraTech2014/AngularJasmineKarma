@@ -25,6 +25,8 @@ import { HttpDemoComponent } from './http-demo/http-demo.component';
 import { MarbleTestComponent } from './marble-test/marble-test.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ProductDetailComponent } from './product-list/product-detail/product-detail.component';
+import { AsyncValidatorComponent } from './form-demo/async-validator/async-validator.component';
+import { UserValidators } from './form-demo/async-validator/user.validator';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { ProductDetailComponent } from './product-list/product-detail/product-de
     MarbleTestComponent,
     IntroductionComponent,
     ProductDetailComponent,
-    FirstTestComponent
+    AsyncValidatorComponent
+    //FirstTestComponent
     
   ],
   imports: [
@@ -57,7 +60,7 @@ import { ProductDetailComponent } from './product-list/product-detail/product-de
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthenticationService, EmployeeService],
+  providers: [AuthenticationService, EmployeeService, UserValidators],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
